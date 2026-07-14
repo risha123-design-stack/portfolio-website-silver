@@ -11,9 +11,6 @@ const formMessage = document.getElementById("formMessage");
 const currentYear = document.getElementById("currentYear");
 
 
-/* ==============================
-   HEADER SCROLL
-============================== */
 
 function updateHeader() {
   if (window.scrollY > 40) {
@@ -27,10 +24,6 @@ window.addEventListener("scroll", updateHeader);
 
 updateHeader();
 
-
-/* ==============================
-   MOBILE MENU
-============================== */
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -85,10 +78,6 @@ document.addEventListener("click", (event) => {
 });
 
 
-/* ==============================
-   ACTIVE NAVIGATION
-============================== */
-
 function updateActiveNavigation() {
   const scrollPosition =
     window.scrollY + 150;
@@ -123,10 +112,6 @@ window.addEventListener(
 );
 
 
-/* ==============================
-   REVEAL ANIMATION
-============================== */
-
 const revealElements =
   document.querySelectorAll(".reveal");
 
@@ -148,11 +133,6 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
-
-
-/* ==============================
-   CONTACT FORM
-============================== */
 
 contactForm.addEventListener(
   "submit",
@@ -208,11 +188,6 @@ contactForm.addEventListener(
     }, 600);
   }
 );
-
-
-/* ==============================
-   CURRENT YEAR
-============================== */
 
 currentYear.textContent =
   new Date().getFullYear();
